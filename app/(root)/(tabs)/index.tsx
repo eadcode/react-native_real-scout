@@ -84,6 +84,7 @@ export default function Index() {
                                     <FlatList
                                         data={ latestProperties }
                                         renderItem={ ({ item }) => <FeaturedCard item={ item } onPress={ () => handleCardPress(item.$id) } /> }
+                                        keyExtractor={ (item) => item.$id }
                                         horizontal
                                         bounces={ false }
                                         showsHorizontalScrollIndicator={ false }
